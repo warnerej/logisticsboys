@@ -20,7 +20,11 @@ export class App {
     afterNextRender(() => {
       if (location.hash) return;
       history.scrollRestoration = 'manual';
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      const toTop = () => window.scrollTo({ top: 0, behavior: 'instant' });
+      toTop();
+      // The browser can still restore/shift the scroll position around the load event.
+      if (document.readyState === 'complete') return;
+      window.addEventListener('load', toTop, { once: true });
     });
   }
 

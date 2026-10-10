@@ -26,33 +26,11 @@ html {
   transform: none;
 }
 
-.truck {
-  position: absolute;
-  top: 0.75rem;
-  left: 0;
-  font-size: 2rem;
-  transform: scaleX(-1);
-  animation: drive 14s linear infinite;
-}
-
-@keyframes drive {
-  from {
-    left: -3rem;
-  }
-  to {
-    left: 100%;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
     transform: none;
     transition: none;
-  }
-  .truck {
-    animation: none;
-    left: 50%;
   }
   html {
     scroll-behavior: auto;
