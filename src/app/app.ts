@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { afterNextRender, Component } from '@angular/core';
 import { SITE } from './site.config';
 import { Hero } from './sections/hero';
 import { MeetTheBoys } from './sections/meet-the-boys';
@@ -15,6 +15,15 @@ import { Contact } from './sections/contact';
   templateUrl: './app.html',
 })
 export class App {
+  constructor() {
+    // Don't let scroll restoration or post-hydration layout shifts leave the page scrolled down.
+    afterNextRender(() => {
+      if (location.hash) return;
+      history.scrollRestoration = 'manual';
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    });
+  }
+
   protected readonly site = SITE;
   protected readonly links = [
     { href: '#boys', label: 'The Boys' },
