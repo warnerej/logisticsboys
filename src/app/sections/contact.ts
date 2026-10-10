@@ -4,10 +4,10 @@ import { SITE } from '../site.config';
 @Component({
   selector: 'app-contact',
   template: `
-    <section id="contact" class="bg-slate-100 py-20">
+    <section id="contact" class="bg-stone-100 py-20">
       <div class="mx-auto max-w-xl px-6">
         <h2 class="text-center text-3xl font-extrabold text-navy md:text-4xl">Contact Us</h2>
-        <p class="mt-3 text-center text-slate-600">{{ site.contactBlurb }}</p>
+        <p class="mt-3 text-center text-stone-600">{{ site.contactBlurb }}</p>
         @if (sent()) {
           <p class="mt-8 rounded border border-orange bg-white p-4 text-center font-semibold" role="status">
             {{ site.contactConfirmation }}
@@ -18,19 +18,19 @@ import { SITE } from '../site.config';
               type="text"
               aria-label="Name"
               placeholder="Name (optional)"
-              class="w-full rounded border border-slate-300 px-4 py-3"
+              class="w-full rounded border border-stone-300 px-4 py-3"
             />
             <input
               type="email"
               aria-label="Email"
               placeholder="Email (or similar)"
-              class="w-full rounded border border-slate-300 px-4 py-3"
+              class="w-full rounded border border-stone-300 px-4 py-3"
             />
             <textarea
               aria-label="Message"
               rows="4"
               placeholder="What needs moving? (Be vague.)"
-              class="w-full rounded border border-slate-300 px-4 py-3"
+              class="w-full rounded border border-stone-300 px-4 py-3"
             ></textarea>
             <button
               type="submit"

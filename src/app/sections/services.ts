@@ -12,14 +12,14 @@ import { Reveal } from '../shared/reveal';
   selector: 'app-services',
   imports: [Reveal],
   template: `
-    <section id="services" class="bg-slate-100 py-20">
+    <section id="services" class="bg-stone-100 py-20">
       <div class="mx-auto max-w-6xl px-6">
         <h2 class="text-center text-3xl font-extrabold text-navy md:text-4xl">Our Solutions</h2>
         <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           @for (s of site.services; track s.title) {
             <div appReveal class="rounded-lg border-t-4 border-orange bg-white p-6 shadow">
               <h3 class="text-lg font-bold text-navy">{{ s.title }}</h3>
-              <p class="mt-2 text-slate-600">{{ s.blurb }}</p>
+              <p class="mt-2 text-stone-600">{{ s.blurb }}</p>
             </div>
           }
         </div>
@@ -30,7 +30,7 @@ import { Reveal } from '../shared/reveal';
               <div class="text-5xl font-extrabold text-orange">
                 {{ counts()[i] }}{{ stat.suffix }}
               </div>
-              <div class="mt-2 text-sm text-slate-300">{{ stat.label }}</div>
+              <div class="mt-2 text-sm text-stone-300">{{ stat.label }}</div>
             </div>
           }
         </div>

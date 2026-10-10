@@ -16,10 +16,10 @@ import { PhotoSlot } from '../shared/photo-slot';
             {{ site.brand }}.<br />
             <span class="text-orange">{{ site.tagline }}</span>
           </h1>
-          <p class="mt-6 max-w-md text-lg text-slate-300">{{ site.subtitle }}</p>
+          <p class="mt-6 max-w-md text-lg text-stone-300">{{ site.subtitle }}</p>
           <a
             href="#contact"
-            class="mt-8 inline-block rounded bg-orange px-6 py-3 font-bold text-navy transition hover:bg-orange-300"
+            class="mt-8 inline-block rounded bg-orange px-6 py-3 font-bold text-navy transition hover:bg-orange/85"
           >
             Request a Quote (Of Some Kind)
           </a>

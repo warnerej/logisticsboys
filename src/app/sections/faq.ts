@@ -11,9 +11,9 @@ import { SITE } from '../site.config';
         </h2>
         <div class="mt-10 space-y-3">
           @for (f of site.faqs; track f.question) {
-            <details class="group rounded-lg border border-slate-200 p-4">
+            <details class="group rounded-lg border border-stone-200 p-4">
               <summary class="cursor-pointer font-bold text-navy">{{ f.question }}</summary>
-              <p class="mt-3 text-slate-600">{{ f.answer }}</p>
+              <p class="mt-3 text-stone-600">{{ f.answer }}</p>
             </details>
           }
         </div>

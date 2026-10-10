@@ -1,6 +1,6 @@
 <header class="sticky top-0 z-10 border-b border-white/10 bg-navy/95 text-white backdrop-blur">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-    <a href="#top" class="text-lg font-extrabold">📦 {{ site.brand }}</a>
+    <a href="#top" class="text-lg font-extrabold">{{ site.brand }}</a>
     <ul class="hidden gap-6 text-sm font-semibold md:flex">
       @for (link of links; track link.href) {
         <li><a [href]="link.href" class="hover:text-orange">{{ link.label }}</a></li>
@@ -20,7 +20,7 @@
   <app-contact />
 </main>
 
-<footer class="relative overflow-hidden bg-navy py-10 text-center text-sm text-slate-400">
+<footer class="relative overflow-hidden bg-navy py-10 text-center text-sm text-stone-400">
   <div class="truck" aria-hidden="true">🚚</div>
   <p class="mt-8">© {{ site.brand }}. All rights reserved. Rights unspecified.</p>
 </footer>

@@ -1,9 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-navy: #0b1f3a;
-  --color-navy-light: #16325c;
-  --color-orange: #ff8a1f;
+  --color-navy: #292524;
+  --color-navy-light: #44403c;
+  --color-orange: #c8794a;
+  --color-orange-dark: #9a5a33;
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 

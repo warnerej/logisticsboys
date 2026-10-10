@@ -5,7 +5,7 @@ import { Component, computed, input, signal } from '@angular/core';
   template: `
     @if (failed()) {
       <div
-        class="flex h-full w-full flex-col items-center justify-center gap-2 bg-slate-200 p-4 text-center text-slate-500"
+        class="flex h-full w-full flex-col items-center justify-center gap-2 bg-stone-200 p-4 text-center text-stone-500"
         role="img"
         [attr.aria-label]="alt()"
       >
