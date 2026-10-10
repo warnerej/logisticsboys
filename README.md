@@ -1,59 +1,24 @@
-# Logisticsboys
+# Logistics Boys
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.2.
+A single-page, deadpan "enterprise logistics" site. It never says what is moved, where, or how.
 
-## Development server
+## Editing the jokes, names, and photos
 
-To start a local development server, run:
+- All copy (names, titles, services, stats, FAQs, testimonials, captions) lives in `src/app/site.config.ts`.
+- Drop photos into `public/images/` using these filenames: `hero.jpg`, `boy-1.jpg`, `boy-2.jpg`, `gallery-1.jpg` to `gallery-6.jpg`. Until a file exists, a placeholder box is shown.
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Develop
 
 ```bash
-ng generate component component-name
+npm start       # http://localhost:4200
+npm test
+npm run build   # output in dist/logisticsboys/browser
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Deploy
 
-```bash
-ng generate --help
-```
+The build prerenders the page, so `dist/logisticsboys/browser` is plain static files.
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Netlify / Vercel**: build command `npm run build`, publish directory `dist/logisticsboys/browser`.
+- **GitHub Pages**: build, then publish the contents of `dist/logisticsboys/browser` (e.g. via a `gh-pages` branch or Actions workflow). For a project page under a sub-path, build with `ng build --base-href /<repo>/`.
+- If you instead run the SSR server (`npm run serve:ssr:logisticsboys`) behind a custom domain, add that domain to `security.allowedHosts` in `angular.json`.

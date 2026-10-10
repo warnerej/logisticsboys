@@ -1,12 +1,27 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { SITE } from './site.config';
+import { Hero } from './sections/hero';
+import { MeetTheBoys } from './sections/meet-the-boys';
+import { Services } from './sections/services';
+import { Gallery } from './sections/gallery';
+import { Tracker } from './sections/tracker';
+import { Testimonials } from './sections/testimonials';
+import { Faq } from './sections/faq';
+import { Contact } from './sections/contact';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [Hero, MeetTheBoys, Services, Gallery, Tracker, Testimonials, Faq, Contact],
   selector: 'app-root',
-  styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('logisticsboys');
+  protected readonly site = SITE;
+  protected readonly links = [
+    { href: '#boys', label: 'The Boys' },
+    { href: '#services', label: 'Solutions' },
+    { href: '#gallery', label: 'Gallery' },
+    { href: '#tracker', label: 'Track' },
+    { href: '#faq', label: 'FAQ' },
+    { href: '#contact', label: 'Contact' },
+  ];
 }
